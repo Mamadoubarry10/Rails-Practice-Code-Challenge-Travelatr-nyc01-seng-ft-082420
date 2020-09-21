@@ -1,0 +1,25 @@
+<h1><%=@blogger.name%></h1>
+
+<label> Age: </label>
+<%=@blogger.age%><br>
+<br>
+<label> Bio: </label><br>
+<%=@blogger.bio%><br>
+<br>
+<label> Total Likes:</labe><br>
+
+
+<%= @blogger.posts.collect { |post| post.likes }.sum %><br>
+<br>
+
+<label> Featured Post: </label><br>
+<%= link_to @blogger.posts.collect{ |post| post.likes }.max %>
+
+
+
+
+
+
+
+
+

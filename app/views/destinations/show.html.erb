@@ -1,0 +1,13 @@
+<h1>Destination page</h1>
+
+<label><h3> Destination:</label></h3>
+<%= @destination.name%><br>
+
+<label><h3> Country:</label></h3>
+<%= @destination.country %><br>
+
+<% @destination.posts.each do |post| %>
+    <%=post.content%>
+<%end%>
+
+
