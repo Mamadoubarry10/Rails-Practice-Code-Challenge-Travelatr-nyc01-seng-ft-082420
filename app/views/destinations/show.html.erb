@@ -6,8 +6,22 @@
 <label><h3> Country:</label></h3>
 <%= @destination.country %><br>
 
-<% @destination.posts.each do |post| %>
-    <%=post.content%>
-<%end%>
+<label> 5 Most Recent Posts: </label>
+<ul>
+   <% @destination.most_five_recent.each do |post|%>
+          <li> <%= post.title %></li>
+        <%end%>
+</ul>
+
+<label> Featured Post: </label>
+<ul>
+<% @destination.most_liked.each do |post| %>
+    <li><%= link_to post.title, post_path(post) %></li>
+<% end %>
+</ul>
+<br>
+
+<label> Average Age of Bloggers: </label><br>
+<%= @destination.avg_age%>
 
 

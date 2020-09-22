@@ -13,7 +13,11 @@
 <br>
 
 <label> Featured Post: </label><br>
-<%= link_to @blogger.posts.collect{ |post| post.likes }.max %>
+<ul>
+<% @blogger.most_liked.each do |post| %>
+    <li><%= link_to post.title, post_path(post) %></li>
+<% end %>
+</ul>
 
 
 

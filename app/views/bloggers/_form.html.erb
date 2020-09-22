@@ -1,5 +1,5 @@
-<% if flash[:my_error] %>
-     <% flash[:my_error].each do |error| %>
+<%= if flash[:my_error] %>
+     <%= flash[:my_error].each do |error| %>
           <p> <%= error %> </p>
      <% end %>
   <% end %>
